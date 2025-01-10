@@ -11,11 +11,8 @@ let left: number = 0
 let right: number = 0
 radio.setGroup(218)
 basic.showIcon(IconNames.Happy)
-radio.sendValue
 basic.forever(function () {
 
-
-    radio.sendValue("forward", 1)
 
     //moving forward
     if (forward == 0) {
@@ -79,4 +76,8 @@ basic.forever(function () {
             }
         })
     }
+})
+
+basic.forever(function() {
+    basic.showNumber(forward)
 })
